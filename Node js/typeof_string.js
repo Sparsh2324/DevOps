@@ -5,7 +5,7 @@ let isStudent=true;
 let score=null;
 let mark
 console.log("Data Type: "+typeof a+"; "+"Value: "+" "+a);
-console.log(typeof b);
+console.log("Data Type: "+typeof b+"; "+"Value: "+b);
 console.log(typeof c);
 console.log(typeof isStudent);
 console.log(typeof score);
