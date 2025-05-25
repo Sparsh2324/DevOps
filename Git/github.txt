@@ -1,0 +1,154 @@
+
+Git Workflow
+Local Git
+	Create local Github repository
+	Clone That Repository
+	make the changes
+	Add the changes
+	Commit the changes
+	Push the changes over Github
+	
+
+To check git version
+	#git --version
+
+To Configure Git user below commands
+	
+	#git config --global user.name "Type Name"	-> (which we use while create github account)
+	#git config --global user.email "Type email ID"	-> (which we use while create github account)
+
+To check what configuration we have do in git
+
+	#git config --list
+
+To Save the changes in Git
+	
+	#git add <directory name>
+
+To commit
+	#git commit -m <Type Message>
+
+
+Clone & Status
+
+	#git clone <some link>		->Any code which we want to use in our desktop/laptop from github. So, copy that code link and paste.
+								Repository will download at our desktop/laptop
+
+Change into the code and save the changes using below commands
+To Save the changes in Git
+	
+	#git add <directory name>
+
+If we want to save all the changes which we made use below command
+	#git add .	(. means all)
+
+To commit
+	#git commit -m <Type Message>
+	
+To display the git code status
+	#git status
+There are 4 types of status
+		untracked
+			New file that git doesn't know anything
+		modified
+			those files which are changed from their original version
+		staged
+			file is add but not yet committed, ready to committed
+		unmodified
+			unchanged
+
+If we wanted to upload our repository from local computer to github, follow below steps
+	#git push <repository name> <branch name>
+Below is the example
+		"git push" is command and repository name is "origin" and branch name is "main"
+		repository name and branch name can be anything as per our code structure.
+	
+	#git push origin main	
+
+if we are going this for first time then we will redirect to github login page to grant permission.
+After this we can able to see our local repository into our github main file
+
+
+If we want to use new created repository, directly we cannot use new repository. we have to make that repository usable for git using below command
+
+first we have to go into that repository
+
+#cd <repository name>
+#git init
+
+We have to create new repository in github portal and add that repository into remote location
+#git remote add "repository name" "code link"
+#git remote add origin code link
+
+To verify remote repository
+#git remote -v
+
+To check branches
+#git branch
+
+To change branch name
+#git branch -m <new branch name>
+
+
+Git Branches
+
+Git branches commands
+	#git branch	(to check the branches)
+
+To rename branch
+	#git branch -M main
+
+to change branch
+	#git checkout <branch name>
+
+to create new branch
+	#git checkout -b <new branch name>
+	
+to delete branch
+	#git branch -d <branch name>
+
+
+Merging Code
+
+There are 2 ways to merge the code
+	1. using command
+	2. creating PR on github portal
+
+Way 1
+	compare code between 2 branches
+		#git diff <branch name>
+		if we are in branch1 and want to compare code with main branch
+	
+	To merge 2 branches
+		#git merge <branch name>
+	
+	If we want to abort the merge, use below commmand.
+		#git merge --abort
+
+Way 2
+	Create PR on github portal (pull request), Then senior developer will validate the code and make decision
+
+To Pull changes from github portal
+	#git pull origin main
+
+
+Undoing Changes
+	Case 1: Staged changes (file add but not yet commit)
+		#git reset <file name>
+	If there are lots of changes need to restore.
+		#git reset
+
+	Case 2: Commited changes (file commit, only for one changes)
+		#git reset HEAD~1
+	whatever changes we commit it called HEAD, ~1 means restore previous changes
+	
+	Case 3: commited changes (for many commits)
+		#git reset <commit hash>
+	To check hash value
+		#git log
+	
+	To remove changes from code also.
+		#git reset --hard <commit hash>
+	
+	
+	
