@@ -1,0 +1,7 @@
+services:
+ tomcat8:
+  image: tomcat:9.0
+  container_name: my-tomcat8_container
+  ports:
+   - "8080:8080"
+   
