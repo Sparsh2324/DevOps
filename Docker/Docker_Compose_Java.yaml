@@ -1,0 +1,6 @@
+services:
+ app:
+  build:
+   context: .
+   dockerfile: Dockerfile
+ #Other configurations specific to your desktop application

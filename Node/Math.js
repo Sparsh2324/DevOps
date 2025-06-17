@@ -1,0 +1,10 @@
+let Add=5+3;
+let Sub=10-2;
+let Multi=5*8;
+let Div=4/4;
+let Modul=100%51;
+console.log("Data Type: "+typeof Add+"; "+"Value: "+" "+Add);
+console.log("Data Type: "+typeof Sub+"; "+"Value: "+" "+Sub);
+console.log("Data Type: "+typeof Multi+"; "+"Value: "+" "+Multi);
+console.log("Data Type: "+typeof Div+"; "+"Value: "+" "+Div);
+console.log("Data Type: "+typeof Modul+"; "+"Value: "+" "+Modul);
