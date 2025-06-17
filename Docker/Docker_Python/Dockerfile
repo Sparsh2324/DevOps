@@ -1,4 +1,4 @@
-FROM python:3.9.1
-ADD . /python_flask
-WORKDIR /python_flask
-RUN pip install flask
+FROM python:latest
+ADD . /python_code
+WORKDIR /python_Code
+CMD ["python", "main.py"]
