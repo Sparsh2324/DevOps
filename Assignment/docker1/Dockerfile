@@ -6,7 +6,7 @@ RUN apt update
 
 RUN apt install Apache2
 
-EXPOSE 5000
+EXPOSE 9090
 
 ENTRYPOINT ["Start"]
 
