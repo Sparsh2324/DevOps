@@ -9,6 +9,8 @@ A) docker exec -it 63e860499f08 /bin/sh
 
 Q) Create a Dockerfile that installs MySQL Server on a Ubuntu base image. Set the root password using environment variables.
 
-A) docker run -exec -it -p 3306:3306 mysql_image
+A) docker run -exec -it -p -d 3306:3306 mysql_image
 A) docker exec -it 95ac6240f691 /bin/bash
-
+mysql -u root
+service mysql start
+mysql -u root

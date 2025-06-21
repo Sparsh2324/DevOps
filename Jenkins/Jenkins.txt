@@ -1,0 +1,42 @@
+Linux command
+	pwd (present working directory)
+	ls -l (to check file/folder types)
+	cat <file name> (to open files)
+	chmod 777 (change modification)
+		there is permission hirarchy
+		4=read, 2=write, 1=execute (Sum=7)
+		1st 7 is for file owner
+		2nd 7 is for groups
+		3rd 7 is for others
+	
+
+21/06/2025
+
+There are two port for jenkins
+	8080	= Web interface
+	50000	= jenkins client communications
+
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
+
+--name (to assign image name)
+
+To get jenkins administrator password
+Run below command on cmd
+docker logs <file name>
+
+Jenkins has JAVA dependancy.
+
+
+*Passing Parameters to a job
+This project is parameterized under General
+
+Add a parameter ->String -> Name=FIRST_NAME -> Default Value=Dummy first name
+Repeat for LAST_NAME
+
+Execute shell
+	echo "Hello, $FIRST_NAME $LAST_NAME"
+	
+	Save
+
+Instead of Build, we will now see build with parameters
+It will ask for parameter values when we build
