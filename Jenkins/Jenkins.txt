@@ -9,6 +9,8 @@ Linux command
 		2nd 7 is for groups
 		3rd 7 is for others
 	
+	apt auto-remove <package name>
+	
 
 21/06/2025
 
@@ -40,3 +42,53 @@ Execute shell
 
 Instead of Build, we will now see build with parameters
 It will ask for parameter values when we build
+
+
+*Installation of NodeJS plugIns from Jenkins
+	Manage Jenkins
+	  plagins
+	   Available plugins
+	     search require plugIns
+		   click install
+	
+	  Tools
+	    NodeJS installations
+		  give Name -> select which version need to install
+		Save
+	
+	Follow below steps for new project
+
+
+*Create new item (for private repo)*
+	Freestyle Project
+	Source Code Management
+		Git
+		  Repository URL
+		  Add credentials
+		 
+To use "Source Code Management"
+for Private Repo
+	Need to use Personal access token (PAT) from github
+	go to github setting-> developer setting-> go to personal access token-> token(classic)
+	-> Generate token -> classic
+
+	Change branch
+	
+	Build Steps
+	  add build steps
+	    Execute shell
+		  add command to execute file
+		  file location is where files are store in jenkins container(for eg. /var/jenkins_home/workspace/Hello_Git/Assignment/NodeJS
+																		If the file location is at current working directory then mention only file name)
+For NodeJS
+	Environment
+	  Provide Node & npm bin/ folder to PATH (check the box)
+
+Save
+
+Click Build now.
+
+
+
+	
+	

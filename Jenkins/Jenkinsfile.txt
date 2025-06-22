@@ -1,0 +1,61 @@
+**Basic Jenkins script**
+
+pipeline{
+    agent any
+    
+    stages{
+        stage('Build'){
+            steps{
+                echo 'Building..'
+                sh 'pwd'
+                sh 'ls -l'
+            }
+        }
+    }
+}
+
+______________________________________________________________________________________________________
+**Using Credentials**
+
+pipeline{
+    agent any
+    
+    environment{
+        secret = credentials('53bde493-8dba-4562-a2aa-fbc6f2e84c81')
+    }
+    
+    stages{
+        stage('Example Stage 1'){
+            steps{
+                sh 'echo $secret'
+            }
+        }
+    }
+}
+
+______________________________________________________________________________________________________
+**Jenkins_ENV_Pipeline**
+
+pipeline{
+    agent any
+    
+    environment{
+        INSTITUTE="CDAC"
+        CENTER="ACTS"
+        }
+    
+    stages{
+        stage('Build'){
+            steps{
+                sh 'echo $INSTITUTE $CENTER'
+            }
+        }
+    }
+}
+
+______________________________________________________________________________________________________
+
+
+
+
+
