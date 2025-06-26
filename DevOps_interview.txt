@@ -1,0 +1,48 @@
+Docker
+
+What is Docker
+  Docker is an open-source container platform for application development
+  
+What is a Docker image?
+  It is blueprint of read-only template that creates containers. It has everything a developer needs to run an application
+
+What is a Docker container?
+  It's essentially a runtime instance of a Docker image, containing everything the application needs to run, including the code, runtime, system tools, libraries, and settings.
+  A container is an isolated and lightweight runtime environment
+
+How does Docker differ from a virtual machine?
+  The main difference between Docker and VMs lies in their architecture
+	*VMs abstract hardware details to make it easier to run applications on different hardware architectures and use hardware resources more efficiently
+	*Docker, on the other hand, was designed to provide a lightweight and portable way to package and run applications in an isolated and reproducible environment
+	
+What is Docker Engine?
+  The Docker Engine is the core component of the Docker platform, responsible for building, shipping, and running containerized applications
+
+What is a Dockerfile?
+  A Dockerfile is a script that contains a set of instructions for building a docker image.
+
+How can you remove all stopped containers and unused networks in Docker?
+  Using "docker prune" command, it delete unused container, networks, images.
+
+  
+
+Git
+
+What is Git?
+  Git is a distributed version control system used for tracking changes in computer files and coordinating work among multiple developers.
+
+What is a Git repository?
+  A Git repository is a collection of files and directories that Git manages. It stores the history of changes and metadata about the project.
+  
+What is the difference between a local and remote repository?
+  A local repository is on your computer, while a remote repository is hosted on a server (like GitHub, GitLab, or Bitbucket).
+  
+What is a commit?
+  A commit is a snapshot of your changes in the repository at a specific point in time.
+  
+What is branching?
+  Branching allows you to create isolated lines of development, enabling multiple developers to work on different features or bug fixes simultaneously without interfering with each other.
+  
+What is the staging area (index)?
+  The staging area is an intermediary space where you can stage changes before committing them.
+  
