@@ -1,0 +1,94 @@
+Linux command
+	pwd (present working directory)
+	ls -l (to check file/folder types)
+	cat <file name> (to open files)
+	chmod 777 (change modification)
+		there is permission hirarchy
+		4=read, 2=write, 1=execute (Sum=7)
+		1st 7 is for file owner
+		2nd 7 is for groups
+		3rd 7 is for others
+	
+	apt auto-remove <package name>
+	
+
+21/06/2025
+
+There are two port for jenkins
+	8080	= Web interface
+	50000	= jenkins client communications
+
+docker run -d -p 8080:8080 -p 50000:50000 --name jenkins jenkins/jenkins:lts
+
+--name (to assign image name)
+
+To get jenkins administrator password
+Run below command on cmd
+docker logs <file name>
+
+Jenkins has JAVA dependancy.
+
+
+*Passing Parameters to a job
+This project is parameterized under General
+
+Add a parameter ->String -> Name=FIRST_NAME -> Default Value=Dummy first name
+Repeat for LAST_NAME
+
+Execute shell
+	echo "Hello, $FIRST_NAME $LAST_NAME"
+	
+	Save
+
+Instead of Build, we will now see build with parameters
+It will ask for parameter values when we build
+
+
+*Installation of NodeJS plugIns from Jenkins
+	Manage Jenkins
+	  plagins
+	   Available plugins
+	     search require plugIns
+		   click install
+	
+	  Tools
+	    NodeJS installations
+		  give Name -> select which version need to install
+		Save
+	
+	Follow below steps for new project
+
+
+*Create new item (for private repo)*
+	Freestyle Project
+	Source Code Management
+		Git
+		  Repository URL
+		  Add credentials
+		 
+To use "Source Code Management"
+for Private Repo
+	Need to use Personal access token (PAT) from github
+	go to github setting-> developer setting-> go to personal access token-> token(classic)
+	-> Generate token -> classic
+
+	Change branch
+	
+	Build Steps
+	  add build steps
+	    Execute shell
+		  add command to execute file
+		  file location is where files are store in jenkins container(for eg. /var/jenkins_home/workspace/Hello_Git/Assignment/NodeJS
+																		If the file location is at current working directory then mention only file name)
+For NodeJS
+	Environment
+	  Provide Node & npm bin/ folder to PATH (check the box)
+
+Save
+
+Click Build now.
+
+
+
+	
+	
